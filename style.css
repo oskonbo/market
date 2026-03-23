@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Inter';
+    src: url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+.product-card {
+    transition: all 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 25px -5px rgba(0,0,0,0.4);
+}
+
+.category-btn.active {
+    @apply bg-orange-600 text-white;
+}
+
+.page {
+    display: block;
+}
+
+.page.hidden {
+    display: none !important;
+}
+
+/* Small animation on flash badge */
+.flash {
+    animation: flash 2s infinite;
+}
+
+@keyframes flash {
+    0%, 100% { opacity: 1; }
+    50%      { opacity: 0.6; }
+}
